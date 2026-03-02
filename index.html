@@ -1,100 +1,317 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Dental Booth - Bangalore Dental & General Polyclinic</title>
-  <meta name="description" content="Providing top-quality dental care with advanced equipment in Mahadevapura & HSR Layout, Bangalore.">
-  <meta name="keywords" content="dental, dentistry, Bangalore dental, dental care, root canal, dental implants">
-
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Fonts & CSS -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/css/main.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bangalore Dental &amp; General Polyclinic | Painless Dental Care in Bangalore</title>
+  <meta name="description" content="Bangalore Dental & General Polyclinic offers microscope root canal treatment, CBCT-guided dental implants, All-on-4 full mouth rehabilitation, aligners, and family dentistry in Bangalore.">
+  <meta name="keywords" content="dental clinic in Bangalore, painless dentistry Bangalore, root canal treatment Bangalore, dental implants Bangalore, All-on-4 Bangalore, clear aligners Bangalore">
+  <meta property="og:title" content="Bangalore Dental & General Polyclinic">
+  <meta property="og:description" content="High-Precision & Painless Dental Care in Bangalore. Book your consultation on WhatsApp.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_IN">
+  <meta name="theme-color" content="#1d4ed8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary:#1d4ed8;
+      --primary-dark:#1e3a8a;
+      --text:#0f172a;
+      --muted:#475569;
+      --bg:#f8fbff;
+      --card:#ffffff;
+      --accent:#e0ecff;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin:0;
+      font-family: "Lexend", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      color:var(--text);
+      background:#fff;
+      line-height:1.6;
+    }
+    a { color:inherit; text-decoration:none; }
+    .container { width:min(1120px, 92%); margin:0 auto; }
+    .topbar {
+      background:#0b1220;
+      color:#e2e8f0;
+      font-size:.9rem;
+      padding:.55rem 0;
+    }
+    .topbar .container { display:flex; justify-content:space-between; gap:1rem; flex-wrap:wrap; }
+    header { position:sticky; top:0; z-index:50; background:#fff; box-shadow:0 2px 16px rgba(15,23,42,.08); }
+    .nav {
+      display:flex; align-items:center; justify-content:space-between;
+      padding:.9rem 0;
+    }
+    .logo { font-weight:700; color:var(--primary-dark); font-size:1.08rem; }
+    .tagline { font-size:.78rem; display:block; color:var(--muted); font-weight:400; }
+    .nav-links { display:flex; gap:1rem; flex-wrap:wrap; font-size:.95rem; }
+    .btn {
+      display:inline-block;
+      padding:.78rem 1.1rem;
+      border-radius:999px;
+      font-weight:600;
+      border:1px solid transparent;
+      transition:.2s ease;
+    }
+    .btn-primary { background:var(--primary); color:#fff; }
+    .btn-primary:hover { background:var(--primary-dark); }
+    .btn-outline { border-color:#cbd5e1; color:var(--text); }
+    .btn-outline:hover { border-color:var(--primary); color:var(--primary-dark); }
+    .hero { background:linear-gradient(120deg, #eef4ff 0%, #ffffff 45%, #ebf4ff 100%); padding:4.4rem 0 3.2rem; }
+    .hero-grid {
+      display:grid;
+      grid-template-columns:1.2fr .8fr;
+      gap:2rem;
+      align-items:center;
+    }
+    h1 { font-size:clamp(2rem,4vw,3.2rem); line-height:1.15; margin:0 0 1rem; }
+    h1 em { color:var(--primary); font-style:normal; }
+    .subtitle { color:var(--muted); max-width:60ch; }
+    .hero-cta { display:flex; gap:.75rem; flex-wrap:wrap; margin:1.25rem 0 .85rem; }
+    .trust { font-weight:500; color:#0f766e; }
+    .hero-card {
+      background:var(--card);
+      border:1px solid #dbeafe;
+      border-radius:24px;
+      padding:1.2rem;
+      box-shadow:0 16px 30px rgba(30,64,175,.1);
+    }
+    .hero-card h3 { margin:.2rem 0 .5rem; }
+    .hero-card ul { margin:.2rem 0 0 1.1rem; color:var(--muted); }
+    section { padding:4rem 0; }
+    h2 { font-size:clamp(1.5rem,2.5vw,2.2rem); margin:0 0 .9rem; }
+    .intro { color:var(--muted); max-width:75ch; }
+    .brands {
+      display:grid;
+      grid-template-columns:repeat(6, minmax(120px,1fr));
+      gap:.75rem;
+      margin-top:1.3rem;
+    }
+    .brand {
+      background:#f8fafc;
+      border:1px solid #e2e8f0;
+      border-radius:12px;
+      padding:.9rem;
+      text-align:center;
+      font-weight:600;
+      color:#334155;
+    }
+    .about, .offer { background:var(--bg); }
+    .services-grid, .why-grid, .testimonials, .team-grid { display:grid; gap:1rem; }
+    .services-grid { grid-template-columns:repeat(3,minmax(0,1fr)); margin-top:1rem; }
+    .card {
+      border:1px solid #e2e8f0;
+      border-radius:16px;
+      background:#fff;
+      padding:1.05rem;
+    }
+    .featured { background:#1e40af; color:#fff; border:0; }
+    .featured p { color:#dbeafe; }
+    .team-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+    .doctor { display:flex; gap:.8rem; align-items:flex-start; }
+    .doctor .avatar {
+      min-width:52px; height:52px; border-radius:50%;
+      background:#dbeafe; display:grid; place-items:center;
+      color:#1e3a8a; font-weight:700;
+    }
+    .testimonials { grid-template-columns:repeat(3,minmax(0,1fr)); margin-top:1rem; }
+    .why-grid { grid-template-columns:repeat(3,minmax(0,1fr)); margin-top:1rem; }
+    .offer-box {
+      background:linear-gradient(135deg,#1d4ed8,#2563eb);
+      color:#fff;
+      border-radius:22px;
+      padding:1.5rem;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:1rem;
+      flex-wrap:wrap;
+    }
+    footer { background:#0b1220; color:#cbd5e1; padding:2.4rem 0; }
+    .footer-grid { display:grid; grid-template-columns:2fr 1fr 1fr; gap:1rem; }
+    .small { font-size:.9rem; color:#94a3b8; }
+    @media (max-width:980px){
+      .hero-grid, .services-grid, .testimonials, .why-grid, .footer-grid { grid-template-columns:1fr 1fr; }
+      .brands { grid-template-columns:repeat(3,minmax(120px,1fr)); }
+    }
+    @media (max-width:720px){
+      .nav { flex-direction:column; align-items:flex-start; gap:.8rem; }
+      .hero-grid, .services-grid, .testimonials, .why-grid, .team-grid, .footer-grid { grid-template-columns:1fr; }
+      .brands { grid-template-columns:repeat(2,minmax(120px,1fr)); }
+    }
+  </style>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Dentist",
+      "name": "Bangalore Dental & General Polyclinic",
+      "description": "Technology-driven dental clinic in Bangalore offering painless and precision dentistry.",
+      "telephone": "+91-9821144764",
+      "email": "Bdngp.sd@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Bangalore",
+        "addressRegion": "Karnataka",
+        "addressCountry": "IN"
+      },
+      "areaServed": "Bangalore"
+    }
+  </script>
 </head>
-
-<body class="index-page">
-
-  <header id="header" class="header sticky-top">
-    <div class="topbar d-flex align-items-center">
-      <div class="container d-flex justify-content-center justify-content-md-between">
-        <div class="d-none d-md-flex align-items-center">
-          <i class="bi bi-clock me-1"></i> Monday - Saturday, 10:30AM to 8:30PM
-        </div>
-        <div class="d-flex align-items-center">
-          <i class="bi bi-phone me-1"></i> Call us now: 9821144764, 9821155764, 9108284794
-        </div>
+<body>
+  <header>
+    <div class="topbar">
+      <div class="container">
+        <span>Monday - Saturday: 10:30 AM to 8:30 PM</span>
+        <span>Call: 9821144764 / 9821155764 / 9108284794</span>
       </div>
     </div>
-
-    <div class="branding d-flex align-items-center">
-      <div class="container position-relative d-flex align-items-center justify-content-end">
-        <a href="index.html" class="logo d-flex align-items-center me-auto">
-          <img src="assets/img/logo.png" alt="Dental Booth Logo">
-          <h1 class="sitename">Dental Booth</h1>
-        </a>
-
-        <nav id="navmenu" class="navmenu">
-          <ul>
-            <li><a href="#hero">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#doctors">Doctors</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-        </nav>
-
-        <a class="cta-btn" href="https://click4appointment.com/clinic-details/bangaloredentalgeneralpolyclinic-2943">Book an Appointment</a>
-      </div>
+    <div class="container nav">
+      <a class="logo" href="#">Bangalore Dental &amp; General Polyclinic<span class="tagline">Committed Till Perfection</span></a>
+      <nav class="nav-links" aria-label="Main">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#team">Team</a>
+        <a href="#testimonials">Reviews</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="btn btn-primary" href="https://wa.me/919821144764" target="_blank" rel="noopener">WhatsApp Now</a>
     </div>
   </header>
 
-  <main class="main">
-    <section id="hero" class="hero section">
-      <div class="container text-center">
-        <h2>Welcome to Dental Booth</h2>
-        <p>Top-quality dental care with advanced technology in Bangalore.</p>
-        <a href="#services" class="btn-get-started">Our Services</a>
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <h1>High-Precision &amp;<br><em>Painless Dental Care</em> in Bangalore</h1>
+          <p class="subtitle">Providing Microscope Root Canal Treatment, Dental Implants, All-on-4 Full Mouth Rehabilitation, Aligners and complete family dental care in Bangalore with advanced technology and compassionate treatment.</p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="https://wa.me/919821144764" target="_blank" rel="noopener">WhatsApp Now</a>
+            <a class="btn btn-outline" href="tel:+919821144764">Call 9821144764</a>
+          </div>
+          <p class="trust">⭐ Trusted by 3000+ Happy Patients</p>
+        </div>
+        <aside class="hero-card" aria-label="Quick highlights">
+          <h3>Why patients choose us</h3>
+          <ul>
+            <li>Microscope-assisted precision dentistry</li>
+            <li>CBCT-guided implant planning</li>
+            <li>Transparent treatment plans &amp; pricing</li>
+            <li>Multi-specialty dental team</li>
+          </ul>
+        </aside>
       </div>
     </section>
 
-    <section id="services" class="services section">
-      <div class="container">
-        <h2>Our Specialized Services</h2>
-        <ul>
-          <li>Microscope-assisted Root Canal Treatment</li>
-          <li>Advanced Dental Implants</li>
-          <li>Cosmetic Dentistry</li>
-          <li>Teeth Whitening & Cleaning</li>
-          <li>Orthodontic Braces & Aligners</li>
-        </ul>
+    <section class="container" id="partners">
+      <h2>Our Clinical Partners</h2>
+      <p class="intro">Only genuine brands and systems used in our treatment workflows.</p>
+      <div class="brands">
+        <div class="brand">Implant Swiss</div>
+        <div class="brand">Osteem</div>
+        <div class="brand">DIO Implants</div>
+        <div class="brand">Straumann</div>
+        <div class="brand">Invisalign</div>
+        <div class="brand">D-Fine Scanner</div>
       </div>
     </section>
 
-    <section id="contact" class="contact section">
+    <section class="about" id="about">
       <div class="container">
-        <h2>Visit Our Clinics</h2>
-        <p><strong>Mahadevapura:</strong> <a href="https://maps.app.goo.gl/SKZ431se5uqrwkndA">Click here for location</a></p>
-        <p><strong>HSR Layout:</strong> <a href="https://maps.app.goo.gl/9TSvNWGQf58XYZam6">Click here for location</a></p>
-        <p><strong>Email:</strong> Bdngp.sd@gmail.com</p>
+        <h2>First Impressions Begin With a Confident Smile</h2>
+        <p class="intro">Bangalore Dental &amp; General Polyclinic is a technology-driven dental clinic in Bangalore committed to delivering painless, precise and ethical dental care. From Microscope-assisted Root Canal Treatment to CBCT-guided Dental Implants and full mouth rehabilitation, we combine advanced equipment with experienced specialists under one roof. Our goal is simple — predictable results, transparent pricing and long-term oral health for every patient.</p>
+        <a class="btn btn-outline" href="#contact">Know Our Clinic</a>
+      </div>
+    </section>
+
+    <section class="container" id="services">
+      <h2>What We Do For Your Smile</h2>
+      <p class="intro">Revenue-focused care pathways with treatment quality and affordability in balance.</p>
+      <div class="services-grid">
+        <article class="card featured">
+          <h3>Flexible Payment &amp; EMI Options Available</h3>
+          <p>Make advanced dental treatment affordable without compromise.</p>
+        </article>
+        <article class="card"><h3>1) Microscope Root Canal Treatment</h3><p>Precision endodontic care with better visibility and comfort.</p></article>
+        <article class="card"><h3>2) Dental Implants (CBCT Guided)</h3><p>Digitally planned implants for predictable function and aesthetics.</p></article>
+        <article class="card"><h3>3) All-on-4 Full Mouth Implants</h3><p>Fixed full-arch rehabilitation designed for long-term confidence.</p></article>
+        <article class="card"><h3>4) Clear Aligners</h3><p>Discreet smile correction with monitored progress.</p></article>
+        <article class="card"><h3>5) Teeth Cleaning &amp; Gum Care</h3><p>Preventive care to protect teeth, gums and overall oral health.</p></article>
+        <article class="card"><h3>6) Zirconia Crowns &amp; Veneers</h3><p>Durable and esthetic restorations for natural-looking smiles.</p></article>
+      </div>
+    </section>
+
+    <section class="container" id="team">
+      <h2>Meet Our Specialists</h2>
+      <p class="intro">Add final doctor photos and exact designations anytime without changing layout.</p>
+      <div class="team-grid">
+        <article class="card doctor">
+          <div class="avatar">AS</div>
+          <div><strong>Dr. Akshim Sukhraj</strong><br>MDS Oral &amp; Maxillofacial Surgeon<br><span class="small">Implantologist</span></div>
+        </article>
+        <article class="card doctor">
+          <div class="avatar">SL</div>
+          <div><strong>Dr. Surbhi Lakhani</strong><br>Endodontist &amp; Cosmetic Dentist<br><span class="small">Microscope RCT Specialist</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="about" id="testimonials">
+      <div class="container">
+        <h2>What Patients Say</h2>
+        <div class="testimonials">
+          <article class="card"><p>“Very smooth root canal experience. The doctor explained every step and there was almost no pain.”</p><strong>Source: Google Review</strong></article>
+          <article class="card"><p>“Clinic is clean, staff is polite, and implant treatment was transparent from consultation to follow-up.”</p><strong>Source: Google Review</strong></article>
+          <article class="card"><p>“Great for family dental care. Timely appointments and clear pricing gave us confidence.”</p><strong>Source: Google Review</strong></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="container" id="why-us">
+      <h2>Why Choose Us</h2>
+      <div class="why-grid">
+        <article class="card">✔ Microscope-Assisted Precision Dentistry</article>
+        <article class="card">✔ CBCT Guided Implant Placement</article>
+        <article class="card">✔ Strict Sterilization Protocols</article>
+        <article class="card">✔ Transparent &amp; Affordable Pricing</article>
+        <article class="card">✔ Experienced Multi-Specialty Team</article>
+        <article class="card">✔ 3000+ Happy Patient Experiences</article>
+      </div>
+    </section>
+
+    <section class="offer" id="offer">
+      <div class="container">
+        <div class="offer-box">
+          <div>
+            <h2>Free Implant Consultation &amp; CBCT Evaluation</h2>
+            <p>Limited slots every week. Reserve your assessment today.</p>
+          </div>
+          <a class="btn btn-outline" style="background:#fff" href="https://wa.me/919821144764" target="_blank" rel="noopener">Book on WhatsApp</a>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer id="footer" class="footer">
-    <div class="container text-center">
-      <p>&copy; 2025 Dental Booth - Bangalore Dental & General Polyclinic. All Rights Reserved.</p>
+  <footer id="contact">
+    <div class="container footer-grid">
+      <div>
+        <h3>Bangalore Dental &amp; General Polyclinic</h3>
+        <p class="small">RHB Colony, Mahadevapura, Bengaluru &amp; HSR Layout, Bengaluru</p>
+        <p class="small">Email: <a href="mailto:Bdngp.sd@gmail.com">Bdngp.sd@gmail.com</a></p>
+      </div>
+      <div>
+        <h3>Working Hours</h3>
+        <p class="small">Mon - Sat: 10:30 AM - 8:30 PM<br>Sunday: By appointment</p>
+      </div>
+      <div>
+        <h3>Connect</h3>
+        <p class="small"><a href="https://wa.me/919821144764">WhatsApp</a><br><a href="tel:+919821144764">Call</a><br><a href="#" aria-label="Instagram profile">Instagram</a></p>
+      </div>
     </div>
   </footer>
-
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/main.js"></script>
 </body>
-
 </html>
